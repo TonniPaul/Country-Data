@@ -1,4 +1,5 @@
 import "./App.css";
+import CountryDataCard from "./component/cards/CountryDataCard";
 import Input from "./component/main/Input";
 import Navbar from "./component/navbar/Navbar";
 
@@ -8,6 +9,7 @@ function App() {
       <Navbar />
       <main className="app_main_container">
         <Input />
+        <CountryDataCard />
       </main>
     </div>
   );

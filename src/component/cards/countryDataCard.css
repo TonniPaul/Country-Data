@@ -1,0 +1,24 @@
+.card_main_container {
+   max-width: 250px;
+   box-shadow: var(--box_shadow);
+   border-radius: 10px;
+   overflow: hidden;
+   margin: 2rem auto;
+}
+.country_flag_container {
+   width: 100%;
+}
+.country_flag {
+   object-fit: contain;
+}
+.country_name, .country_data_sub_container {
+   padding: 1rem ;
+}
+
+.country_data_sub_container {
+   padding-top: 0;
+}
+
+.bold_text {
+   font-weight: 800;
+}
