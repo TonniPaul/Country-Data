@@ -24,10 +24,13 @@
    font-family: inherit;
    font-size: inherit;
    border-radius: 5px;
+   background: var(--white);
 }
 
 #continent > option {
    padding: 1rem;
+   background: var(--white);
+   color: var(--black);
 }
 
 /* ========== MEDIA QUERIES ========== */
