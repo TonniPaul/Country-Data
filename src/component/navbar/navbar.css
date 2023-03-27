@@ -1,0 +1,22 @@
+.nav {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   padding: 1.5rem 1rem;
+   box-shadow: var(--box_shadow);
+}
+
+.logo {
+   color: var(--black);
+   font-weight: 800;
+}
+
+.toggle_mode_container {
+   display: flex ;
+   gap: 10px;
+   background: inherit;
+   border: none;
+   font-family: inherit;
+   cursor: pointer;
+   font-size: .80rem;
+}

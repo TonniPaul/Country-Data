@@ -5,6 +5,8 @@
 /.pnp
 .pnp.js
 
+/rest-countries-api-with-color-theme-switcher-master
+
 # testing
 /coverage
 
