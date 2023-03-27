@@ -20,3 +20,18 @@
    cursor: pointer;
    font-size: .80rem;
 }
+
+/* ========== MEDIA QUERIES ==========  */
+
+@media (min-width: 768px) {
+   .nav {
+      padding: 1.5rem 2rem;
+   }
+   .logo {
+      font-size: 1rem;
+   }
+
+   .toggle_mode_container {
+      font-size: .875rem;
+   }
+}
