@@ -2,7 +2,6 @@ import { useParams } from "react-router-dom";
 import data from "../../data/data.json";
 import "./countryDetails.css";
 
-const addCommasToNumber = (num: number): string => num.toLocaleString();
 
 function CountryDetails() {
   const { countryCode } = useParams();
