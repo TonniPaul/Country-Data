@@ -7,6 +7,7 @@ interface Props {
   region: string;
   capital?: string;
 }
+
 function addCommasToNumber(num: number): string {
   return num.toLocaleString();
 }
@@ -19,6 +20,7 @@ const CountryDataCard = ({
   capital,
 }: Props) => {
   const formattedValue = addCommasToNumber(population);
+
   return (
     <div className="card_main_container">
       <div className="country_flag_container">
