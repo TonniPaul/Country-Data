@@ -17,9 +17,7 @@ function App() {
       setSearchedCountry(filteredCountries);
     } else {
       setSearchedCountry([]);
-      setErrorMessage(
-        `No results found for "${searchValue}". Please try again with a different search term.`
-      );
+      setErrorMessage(searchValue);
     }
   };
 
@@ -44,7 +42,11 @@ function App() {
             })}
           </div>
         ) : (
-          <p> {errorMessage} </p>
+          <p className="error_message">
+            No results found for{" "}
+            <span className="bold_text">"{errorMessage}" </span> Please try
+            again with a different search term.{" "}
+          </p>
         )}
       </main>
     </div>

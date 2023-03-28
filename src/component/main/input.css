@@ -19,7 +19,8 @@
 }
 
 .input:focus,
-.input:active {
+.input:active,
+.input:valid {
    background-color: var(--white);
 }
 
@@ -30,6 +31,7 @@
    padding-right: 10px;
    position: relative;
    cursor: pointer;
+   width: 50%;
 }
 
 .filter_form img {
@@ -70,5 +72,8 @@
    .input_form {
       flex-basis: 60%;
       padding: .3rem 1rem;
+   }
+   .filter_form {
+      flex-basis: max-content;
    }
 }

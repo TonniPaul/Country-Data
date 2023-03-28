@@ -19,6 +19,7 @@
    font-family: inherit;
    cursor: pointer;
    font-size: .80rem;
+   color: var(--black);
 }
 
 /* ========== MEDIA QUERIES ==========  */
