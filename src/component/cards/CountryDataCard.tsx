@@ -10,8 +10,6 @@ interface Props {
   alpha3Code: string;
 }
 
-const addCommasToNumber = (num: number): string => num.toLocaleString();
-
 const CountryDataCard = ({
   flag,
   country,
@@ -20,8 +18,6 @@ const CountryDataCard = ({
   capital,
   alpha3Code,
 }: Props) => {
-  const formattedValue = addCommasToNumber(population);
-
   return (
     <Link to={`/country/${alpha3Code}`} className="card_main_container">
       <div className="country_flag_container">
@@ -33,7 +29,7 @@ const CountryDataCard = ({
         <div className="country_data_sub_container">
           <p className="data_text">
             <span className="bold_text">Population : </span>
-            {formattedValue}
+            {population.toLocaleString()}
           </p>
           <p className="data_text">
             <span className="bold_text">Region : </span> {region}
