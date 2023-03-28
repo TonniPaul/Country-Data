@@ -7,6 +7,7 @@ import data from "./data/data.json";
 
 function App() {
   const [searchedCountry, setSearchedCountry] = useState(data);
+  let [errorMessage, setErrorMessage] = useState("");
 
   const handleSearch = (searchValue: string) => {
     const filteredCountries = data.filter((country) =>
@@ -16,6 +17,9 @@ function App() {
       setSearchedCountry(filteredCountries);
     } else {
       setSearchedCountry([]);
+      setErrorMessage(
+        `No results found for "${searchValue}". Please try again with a different search term.`
+      );
     }
   };
 
@@ -40,7 +44,7 @@ function App() {
             })}
           </div>
         ) : (
-          <p>Not found</p>
+          <p> {errorMessage} </p>
         )}
       </main>
     </div>

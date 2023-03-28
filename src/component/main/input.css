@@ -8,12 +8,19 @@
    margin-bottom: 1rem;
 }
 
-input {
+.input {
    width: 100%;
    padding: 1rem;
    outline: none;
    border: none;
    background: var(--white);
+   font-family: inherit;
+   font-size: .900rem;
+}
+
+.input:focus,
+.input:active {
+   background-color: var(--white);
 }
 
 .filter_form {
