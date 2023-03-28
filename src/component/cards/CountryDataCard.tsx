@@ -1,4 +1,5 @@
 import "./countryDataCard.css";
+import { Link } from "react-router-dom";
 
 interface Props {
   flag: string;
@@ -6,11 +7,10 @@ interface Props {
   population: number;
   region: string;
   capital?: string;
+  alpha3Code: string;
 }
 
-function addCommasToNumber(num: number): string {
-  return num.toLocaleString();
-}
+const addCommasToNumber = (num: number): string => num.toLocaleString();
 
 const CountryDataCard = ({
   flag,
@@ -18,11 +18,12 @@ const CountryDataCard = ({
   population,
   region,
   capital,
+  alpha3Code,
 }: Props) => {
   const formattedValue = addCommasToNumber(population);
 
   return (
-    <div className="card_main_container">
+    <Link to={`/country/${alpha3Code}`} className="card_main_container">
       <div className="country_flag_container">
         <img src={flag} alt={`${country} flag`} className="country_flag" />
       </div>
@@ -42,7 +43,7 @@ const CountryDataCard = ({
           </p>
         </div>
       </div>
-    </div>
+    </Link>
   );
 };
 

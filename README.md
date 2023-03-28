@@ -66,6 +66,8 @@ Then crop/optimize/edit your image however you like, add it to your project, and
 ### What I learned
 
 - I learnt How to use state In TypeScript.
+- How do make use of the "useParam" hook to route from mapped item 
+- How to make use of the "useNavigate" hook to navigate to previous page
 
 ### Continued development
 
@@ -74,7 +76,7 @@ I intend to continue building more projects using typescript.
 
 ### Useful resources
 
-- [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
+- [How to Route from mapped list](https://app.pluralsight.com/guides/react-router-typescript) - This helped me with understanding how to route with react from a mapped list with ID.
 - [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
 
 
