@@ -13,9 +13,11 @@
 
 .country_names {
    display: inline-block;
-   margin-right:10px;
+   margin:10px;
+   margin-left: 0;
    padding: .5rem 1rem;
    box-shadow: var(--box_shadow);
+   border-radius: 5px;
 }
 
 @media (min-width: 768px) {

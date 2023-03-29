@@ -4,7 +4,7 @@ import data from "../../data/data.json";
 import CountryDataCard from "../../component/cards/CountryDataCard";
 import Input from "../../component/main/Input";
 
-function App() {
+function HomPage() {
   const [searchedCountry, setSearchedCountry] = useState(data);
   let [errorMessage, setErrorMessage] = useState("");
 
@@ -52,4 +52,4 @@ function App() {
   );
 }
 
-export default App;
+export default HomPage;
