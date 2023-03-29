@@ -20,7 +20,11 @@ const Input = ({ onSubmit }: InputProps) => {
   return (
     <div className="input_main_container">
       <form className="input_form" onSubmit={handleSubmit}>
-        <img src="/assets/search-icon.svg" alt="" className="search_icon" />
+        <img
+          src="/assets/search-icon.svg"
+          alt="search-icon"
+          className="search_icon"
+        />
         <input
           type="text"
           name="country"

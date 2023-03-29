@@ -10,8 +10,8 @@ const CountryPage = () => {
   return (
     <div className="country_details_container">
       <button className="go_back" onClick={handleButtonClick}>
-        <img src="/assets/back-icon.svg" alt="" />
-        Go Back
+        <img src="/assets/back-icon.svg" alt="back-icon" />
+        Back
       </button>
       <CountryDetails />
     </div>

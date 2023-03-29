@@ -11,7 +11,11 @@ function CountryDetails() {
 
   return (
     <div className="county_details_main">
-      <img src={country?.flag} alt="" className="country_detail_flag" />
+      <img
+        src={country?.flag}
+        alt={`${country?.name} flag`}
+        className="country_detail_flag"
+      />
       <div className="country_details_data_container">
         <h3 className="country_details_header">{country?.name}</h3>
         <div className="card_details_sub_div">
