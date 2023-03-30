@@ -57,16 +57,15 @@ function CountryDetails() {
             </p>
           </div>
         </div>
-        {country?.borders && (
-          <div className="card_details_data_container card_details_last_child">
-            <h4 className="country_border">Border Countries : </h4>
-            <p className="border_country_name">
-              {country?.borders?.map((item) => {
-                return <span className="country_names">{item}</span>;
-              })}
-            </p>
-          </div>
-        )}
+
+        <div className="card_details_data_container card_details_last_child">
+          <h4 className="country_border">Border Countries : </h4>
+          <p className="border_country_name">
+            {country?.borders?.map((item) => {
+              return <span className="country_names">{item}</span>;
+            })}
+          </p>
+        </div>
       </div>
     </div>
   );

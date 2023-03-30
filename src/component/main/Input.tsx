@@ -1,20 +1,27 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import "./input.css";
 
 interface InputProps {
-  onSubmit: (searchValue: string) => void;
+  onSubmit: (searchValue: string, filterValue: string) => void;
 }
 
 const Input = ({ onSubmit }: InputProps) => {
   const [searchValue, setSearchValue] = useState("");
+  const [filterValue, setFilterValue] = useState("");
 
   const handleSearch = (e: React.ChangeEvent<HTMLInputElement>) => {
     setSearchValue(e.target.value);
   };
 
+  const handleSelectedFilter = (e: React.ChangeEvent<HTMLSelectElement>) => {
+    setFilterValue(e.target.value);
+    alert(filterValue);
+  };
+
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    onSubmit(searchValue);
+    searchValue.length === 0 && setSearchValue("");
+    onSubmit(searchValue, filterValue);
   };
 
   return (
@@ -36,9 +43,16 @@ const Input = ({ onSubmit }: InputProps) => {
         />
       </form>
 
-      <form className="filter_form">
-        <select name="continent" id="continent">
-          <option value="Filter by Region">Filter by Region</option>
+      <form className="filter_form" onSubmit={handleSubmit}>
+        <select
+          name="continent"
+          id="continent"
+          onChange={handleSelectedFilter}
+          value={filterValue}
+        >
+          <option selected hidden>
+            Filter by Region
+          </option>
           <option value="Africa">Africa</option>
           <option value="America">America</option>
           <option value="Asia">Asia</option>

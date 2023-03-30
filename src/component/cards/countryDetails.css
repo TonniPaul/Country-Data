@@ -20,6 +20,9 @@
    border-radius: 5px;
 }
 
+#dark .country_names {
+   background: var(--primary_dark);
+}
 @media (min-width: 768px) {
 
    

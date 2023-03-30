@@ -20,9 +20,7 @@ const CountryDataCard = ({
 }: Props) => {
   return (
     <Link to={`/country/${alpha3Code}`} className="card_main_container">
-      <div className="country_flag_container">
-        <img src={flag} alt={`${country} flag`} className="country_flag" />
-      </div>
+      <img src={flag} alt={`${country} flag`} className="country_flag" />
       <div className="country_data_container">
         <h3 className="country_name"> {country} </h3>
 

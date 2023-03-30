@@ -10,7 +10,10 @@
    --box_shadow : 0px 2px 8px rgba(99, 99, 99, 0.4);
    --black :  #111517;
    --white : #ffffff;
-   --red : #ff0000;
+   
+   /* ========== DARK MODE VARIABLE ========== */
+   --bg_dark : #202d36;
+   --primary_dark : #2b3743;
 }
 
 body {
@@ -18,6 +21,10 @@ body {
    font-weight: 400;
    font-size: .900rem;
    color: var(--black);
+}
+
+body #dark {
+   color: var(--white);
 }
 
 a {

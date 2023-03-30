@@ -6,13 +6,22 @@
    box-shadow: var(--box_shadow);
 }
 
+#dark .nav {
+   background: var(--primary_dark);
+}
+
 .logo {
    color: var(--black);
    font-weight: 800;
 }
 
+#dark .logo {
+   color: var(--white);
+}
+
 .toggle_mode_container {
    display: flex ;
+   align-items: center;
    gap: 10px;
    background: inherit;
    border: none;
@@ -21,7 +30,13 @@
    font-size: .80rem;
    color: var(--black);
 }
+#dark .toggle_mode_container {
+   color: var(--white);
+}
 
+#dark .mode_icon {
+filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(171deg) brightness(107%) contrast(101%);
+}
 /* ========== MEDIA QUERIES ==========  */
 
 @media (min-width: 768px) {

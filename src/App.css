@@ -1,0 +1,6 @@
+.App {
+   min-height: 100vh;
+}
+body #dark {
+   background: var(--bg_dark);
+}

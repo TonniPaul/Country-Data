@@ -19,6 +19,15 @@
    color: var(--black);
 }
 
+#dark .go_back {
+   background: var(--primary_dark);
+   color: var(--white);
+}
+
+#dark .back-icon {
+   filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(171deg) brightness(107%) contrast(101%);
+}
+
 @media (min-width: 768px) {
    .country_details_container {
       width: 90%;
