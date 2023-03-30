@@ -84,6 +84,11 @@
   color: var(--black);
 }
 
+#dark #continent > option {
+  background: var(--primary_dark);
+  color: var(--white);
+}
+
 /* ========== MEDIA QUERIES ========== */
 
 @media (min-width: 768px) {
