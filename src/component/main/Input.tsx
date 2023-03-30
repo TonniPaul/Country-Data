@@ -3,9 +3,10 @@ import "./input.css";
 
 interface InputProps {
   onSubmit: (searchValue: string, filterValue: string) => void;
+  handleFilterByRegion: (filterValue: string) => void;
 }
 
-const Input = ({ onSubmit }: InputProps) => {
+const Input = ({ onSubmit, handleFilterByRegion }: InputProps) => {
   const [searchValue, setSearchValue] = useState("");
   const [filterValue, setFilterValue] = useState("");
 
@@ -15,7 +16,8 @@ const Input = ({ onSubmit }: InputProps) => {
 
   const handleSelectedFilter = (e: React.ChangeEvent<HTMLSelectElement>) => {
     setFilterValue(e.target.value);
-    alert(filterValue);
+    handleFilterByRegion(e.target.value);
+    setSearchValue("");
   };
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
@@ -53,8 +55,9 @@ const Input = ({ onSubmit }: InputProps) => {
           <option selected hidden>
             Filter by Region
           </option>
+          <option value="All">All</option>
           <option value="Africa">Africa</option>
-          <option value="America">America</option>
+          <option value="Americas">America</option>
           <option value="Asia">Asia</option>
           <option value="Europe">Europe</option>
           <option value="Oceania">Oceania</option>

@@ -5,26 +5,45 @@ import CountryDataCard from "../../component/cards/CountryDataCard";
 import Input from "../../component/main/Input";
 
 function HomPage() {
+  // setting default value of countries to data in the json file.
   const [searchedCountry, setSearchedCountry] = useState(data);
   let [errorMessage, setErrorMessage] = useState("");
 
-  const handleSearch = (searchValue: string) => {
-    const filteredCountries = data.filter(
-      (country) =>
-        country.name.toLowerCase().includes(searchValue.toLowerCase()) ||
-        country.capital?.toLowerCase().includes(searchValue.toLowerCase())
-    );
+  const handleSearch = (searchValue: string, filterValue: string) => {
+    const filteredCountries = data
+      .filter((country) =>
+        filterValue === "All" || filterValue === ""
+          ? country
+          : country.region === filterValue
+      )
+      .filter(
+        (country) =>
+          country.name.toLowerCase().includes(searchValue.toLowerCase()) ||
+          country.capital?.toLowerCase().includes(searchValue.toLowerCase())
+      );
     if (filteredCountries.length > 0) {
       setSearchedCountry(filteredCountries);
+      searchValue.length > 0 ? setErrorMessage("") : setSearchedCountry(data);
     } else {
       setSearchedCountry([]);
       setErrorMessage(searchValue);
     }
   };
 
+  const handleFilterByRegion = (region: string) => {
+    if (region === "All") {
+      setSearchedCountry(data);
+    } else {
+      setSearchedCountry(data.filter((country) => country.region === region));
+    }
+  };
+
   return (
     <main className="app_main_container">
-      <Input onSubmit={handleSearch} />
+      <Input
+        onSubmit={handleSearch}
+        handleFilterByRegion={handleFilterByRegion}
+      />
       {searchedCountry.length > 0 ? (
         <div className="app_data">
           {searchedCountry.map((data) => {
