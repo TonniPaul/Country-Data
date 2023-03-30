@@ -16,8 +16,6 @@ This is a solution to the [REST Countries API with color theme switcher challeng
 - [Author](#author)
 - [Acknowledgments](#acknowledgments)
 
-**Note: Delete this note and update the table of contents based on what sections you keep.**
-
 ## Overview
 
 ### The challenge
@@ -35,18 +33,9 @@ Users should be able to:
 
 ![](./public/assets/Screenshot.png)
 
-Add a screenshot of your solution. The easiest way to do this is to use Firefox to view your project, right-click the page and select "Take a Screenshot". You can choose either a full-height screenshot or a cropped one based on how long the page is. If it's very long, it might be best to crop it.
 
-Alternatively, you can use a tool like [FireShot](https://getfireshot.com/) to take the screenshot. FireShot has a free option, so you don't need to purchase it. 
-
-Then crop/optimize/edit your image however you like, add it to your project, and update the file path in the image above.
-
-**Note: Delete this note and the paragraphs above when you add your screenshot. If you prefer not to add a screenshot, feel free to remove this entire section.**
-
-### Links
-
-- Solution URL: [Add solution URL here](https://github.com/TonniPaul/Country-Data)
-- Live Site URL: [Add live site URL here](http://country-data.tonnipaul.com/)
+- Solution URL: [GITHUB](https://github.com/TonniPaul/Country-Data)
+- Live Site URL: [LIVE SITE](http://country-data.tonnipaul.com/)
 
 ## My process
 
@@ -59,8 +48,6 @@ Then crop/optimize/edit your image however you like, add it to your project, and
 - Mobile-first workflow
 - [React](https://reactjs.org/) - JS library
 - [TypeScript](https://www.typescriptlang.org/) - TypeScript 
-- [Styled Components](https://styled-components.com/) - For styles
-
 
 
 ### What I learned
@@ -76,8 +63,7 @@ I intend to continue building more projects using typescript.
 
 ### Useful resources
 
-- [How to Route from mapped list](https://app.pluralsight.com/guides/react-router-typescript) - This helped me with understanding how to route with react from a mapped list with ID.
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
+- [How to Route from mapped list](https://app.pluralsight.com/guides/react-router-typescript) - This helped me with understanding how to route with react from a mapped list with using the useParam Hook.
 
 
 ## Author
