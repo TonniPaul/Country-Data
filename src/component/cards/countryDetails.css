@@ -25,7 +25,7 @@
   background: var(--primary_dark);
 }
 
-@media (min-width: 768px) {
+@media (min-width: 600px) {
   .card_details_sub_div {
     display: flex;
     justify-content: space-between;
@@ -34,16 +34,18 @@
     position: relative;
   }
 
+}
+@media (min-width: 768px) {
   .card_details_last_child {
     display: flex;
     gap: 20px;
     align-items: center;
   }
-}
 
+}
 @media (min-width: 900px) {
   .country_detail_flag {
-    width: 50%;
+    width: 45%;
   }
 
   .county_details_main {
