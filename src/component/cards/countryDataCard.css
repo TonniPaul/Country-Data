@@ -12,8 +12,8 @@
 }
 
 .country_flag {
-   height: 150px;
-   object-fit: cover;
+  height: 150px;
+  object-fit: cover;
   width: 100%;
   display: block;
 }

@@ -1,48 +1,51 @@
-.card_details_data_container  {
-   padding: 16px 0;
+.card_details_data_container {
+  padding: 16px 0;
 }
+
 .country_details_header {
-   padding: 1rem 0;
-   font-size: 1.125rem;
-   font-weight: 800;
+  padding: 1rem 0;
+  font-size: 1.125rem;
+  font-weight: 800;
 }
 
 .card_details_data_container * {
-   margin-bottom: 5px;
+  margin-bottom: 5px;
 }
 
 .country_names {
-   display: inline-block;
-   margin:10px;
-   margin-left: 0;
-   padding: .5rem 1rem;
-   box-shadow: var(--box_shadow);
-   border-radius: 5px;
+  display: inline-block;
+  margin: 10px;
+  margin-left: 0;
+  padding: 0.5rem 1rem;
+  box-shadow: var(--box_shadow);
+  border-radius: 5px;
 }
 
 #dark .country_names {
-   background: var(--primary_dark);
+  background: var(--primary_dark);
 }
+
 @media (min-width: 768px) {
-
-   
-   .card_details_sub_div {
-      display: flex;
-      justify-content: space-between;
-      gap: 90px;
-      width: 100%;
-      position: relative;
-   }
-
+  .card_details_sub_div {
+    display: flex;
+    justify-content: space-between;
+    gap: 90px;
+    width: 100%;
+    position: relative;
+  }
 }
 
 @media (min-width: 900px) {
-   .country_detail_flag {width: 50%;}
-   .county_details_main {
-      display: flex;
-      gap: 40px;
-   }
-   .card_details_last_child {
-      margin-top: 5rem;
-   }
+  .country_detail_flag {
+    width: 50%;
+  }
+
+  .county_details_main {
+    display: flex;
+    gap: 40px;
+  }
+
+  .card_details_last_child {
+    margin-top: 5rem;
+  }
 }

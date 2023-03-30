@@ -1,35 +1,36 @@
 .country_details_container {
-   width: 85%;
-   max-width: 1440px;
-   margin: 2rem auto;
-   align-items: center;
+  width: 85%;
+  max-width: 1440px;
+  margin: 2rem auto;
+  align-items: center;
 }
 
 .go_back {
-   display: flex;
-   gap: 10px;
-   cursor: pointer;
-   padding: .5rem 1rem;
-   border: none;
-   background: var(--white);
-   border-radius: 5px;
-   margin-bottom: 3.5rem;
-   font-family: inherit;
-   box-shadow: var(--box_shadow);
-   color: var(--black);
+  display: flex;
+  gap: 10px;
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  border: none;
+  background: var(--white);
+  border-radius: 5px;
+  margin-bottom: 3.5rem;
+  font-family: inherit;
+  box-shadow: var(--box_shadow);
+  color: var(--black);
 }
 
 #dark .go_back {
-   background: var(--primary_dark);
-   color: var(--white);
+  background: var(--primary_dark);
+  color: var(--white);
 }
 
 #dark .back-icon {
-   filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(171deg) brightness(107%) contrast(101%);
+  filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(171deg)
+    brightness(107%) contrast(101%);
 }
 
 @media (min-width: 768px) {
-   .country_details_container {
-      width: 90%;
-   }
+  .country_details_container {
+    width: 90%;
+  }
 }

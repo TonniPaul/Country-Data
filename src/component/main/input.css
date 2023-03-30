@@ -1,99 +1,105 @@
 .input_form {
-   display: flex;
-   gap: 10px;
-   align-items: center;
-   box-shadow: var(--box_shadow);
-   padding: .5rem 1rem;
-   border-radius: 5px;
-   margin-bottom: 1rem;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  box-shadow: var(--box_shadow);
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  margin-bottom: 1rem;
 }
+
 #dark .input_form {
-   background: var(--primary_dark);
+  background: var(--primary_dark);
 }
+
 .input {
-   width: 100%;
-   padding: 1rem;
-   outline: none;
-   border: none;
-   background: var(--white);
-   font-family: inherit;
-   font-size: .900rem;
+  width: 100%;
+  padding: 1rem;
+  outline: none;
+  border: none;
+  background: var(--white);
+  font-family: inherit;
+  font-size: 0.9rem;
 }
 
 .input:focus,
 .input:active,
 .input:valid {
-   background-color: inherit;
+  background-color: inherit;
 }
 
 #dark .input {
-   background: var(--primary_dark);
-   color: var(--white);
+  background: var(--primary_dark);
+  color: var(--white);
 }
 
 .filter_form {
-   display: flex;
-   align-items: center;
-   box-shadow: var(--box_shadow);
-   padding-right: 10px;
-   position: relative;
-   cursor: pointer;
-   width: 50%;
+  display: flex;
+  align-items: center;
+  box-shadow: var(--box_shadow);
+  padding-right: 10px;
+  position: relative;
+  cursor: pointer;
+  width: 50%;
 }
 
 #dark .filter_form {
-   background: var(--primary_dark);
+  background: var(--primary_dark);
 }
 
 .filter_form img {
-   position: absolute;
-   right: 10px;
-   z-index: 1;
+  position: absolute;
+  right: 10px;
+  z-index: 1;
 }
 
 #dark .filter_form img {
-   filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(171deg) brightness(107%) contrast(101%);
+  filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(171deg)
+    brightness(107%) contrast(101%);
 }
+
 #continent {
-   padding: 1rem;
-   padding-right: 3rem;
-   outline: none;
-   border: none;
-   font-family: inherit;
-   font-size: inherit;
-   border-radius: 5px;
-   background: var(--white);
-   color: var(--black);
-   --webkit-appearance: none;
-   appearance: none;
-   z-index: 1;
+  padding: 1rem;
+  padding-right: 3rem;
+  outline: none;
+  border: none;
+  font-family: inherit;
+  font-size: inherit;
+  border-radius: 5px;
+  background: var(--white);
+  color: var(--black);
+  --webkit-appearance: none;
+  appearance: none;
+  z-index: 1;
 }
 
 #dark #continent {
-   background: var(--primary_dark);
-   color: var(--white);
+  background: var(--primary_dark);
+  color: var(--white);
 }
 
 #continent > option {
-   padding: 1rem;
-   background: var(--white);
-   color: var(--black);
+  padding: 1rem;
+  background: var(--white);
+  color: var(--black);
 }
 
 /* ========== MEDIA QUERIES ========== */
 
 @media (min-width: 768px) {
-   .input_main_container {
-      display: flex;
-      align-items: flex-start;
-      justify-content: space-between;
-      margin: 0;
-   }
-   .input_form {
-      flex-basis: 60%;
-      padding: .3rem 1rem;
-   }
-   .filter_form {
-      flex-basis: max-content;
-   }
+  .input_main_container {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin: 0;
+  }
+
+  .input_form {
+    flex-basis: 60%;
+    padding: 0.3rem 1rem;
+  }
+
+  .filter_form {
+    flex-basis: max-content;
+  }
 }
