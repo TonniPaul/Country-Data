@@ -40,7 +40,7 @@
   padding-right: 10px;
   position: relative;
   cursor: pointer;
-  width: 50%;
+  width: max-content;
 }
 
 #dark .filter_form {

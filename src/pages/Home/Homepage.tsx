@@ -7,7 +7,11 @@ import Input from "../../component/main/Input";
 function HomPage() {
   // setting default value of countries to data in the json file.
   const [searchedCountry, setSearchedCountry] = useState(data);
-  let [errorMessage, setErrorMessage] = useState("");
+  let [errorMessage, setErrorMessage] = useState({
+    search: "",
+    region: "",
+    all: true,
+  });
 
   const handleSearch = (searchValue: string, filterValue: string) => {
     const filteredCountries = data
@@ -23,10 +27,14 @@ function HomPage() {
       );
     if (filteredCountries.length > 0) {
       setSearchedCountry(filteredCountries);
-      searchValue.length > 0 ? setErrorMessage("") : setSearchedCountry(data);
     } else {
       setSearchedCountry([]);
-      setErrorMessage(searchValue);
+      setErrorMessage({
+        search: searchValue,
+        region:
+          filterValue === "All" || filterValue === "" ? "All" : filterValue,
+        all: filterValue === "All" || filterValue === "" ? true : false,
+      });
     }
   };
 
@@ -34,7 +42,7 @@ function HomPage() {
     if (region === "All") {
       setSearchedCountry(data);
     } else {
-      setSearchedCountry(data.filter((country) => country.region === region));
+      setSearchedCountry(data.filter((c) => c.region === region));
     }
   };
 
@@ -62,9 +70,15 @@ function HomPage() {
         </div>
       ) : (
         <p className="error_message">
-          No results found for{" "}
-          <span className="bold_text">"{errorMessage}" </span> Please try again
-          with a different search term.{" "}
+          No result found for your search term{" "}
+          <span className="bold_text">"{errorMessage.search}" </span> in the{" "}
+          <span className="bold_text">"{`${errorMessage.region}`} </span>
+          <span className="bold_text">
+            {" "}
+            {`${errorMessage.all ? "regions." : "region."}`} "
+          </span>{" "}
+          Please try searching again with a different region or a different
+          search term.
         </p>
       )}
     </main>
