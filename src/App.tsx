@@ -5,6 +5,7 @@ import { Routes, Route } from "react-router-dom";
 import CountryPage from "./pages/countryPage/CountryPage";
 import { useEffect, useState } from "react";
 import Footer from "./component/Footer/Footer";
+import ScrollButton from "./component/ScrollButton/ScrollButton";
 
 function App() {
   const [theme, setTheme] = useState(() => {
@@ -27,6 +28,7 @@ function App() {
         <Route path="/" element={<Homepage />} />
         <Route path="/country/:countryCode" element={<CountryPage />} />
       </Routes>
+      <ScrollButton />
       <Footer />
     </div>
   );
