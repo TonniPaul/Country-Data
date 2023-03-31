@@ -4,6 +4,7 @@ import Homepage from "./pages/Home/Homepage";
 import { Routes, Route } from "react-router-dom";
 import CountryPage from "./pages/countryPage/CountryPage";
 import { useEffect, useState } from "react";
+import Footer from "./component/Footer/Footer";
 
 function App() {
   const [theme, setTheme] = useState(() => {
@@ -26,6 +27,7 @@ function App() {
         <Route path="/" element={<Homepage />} />
         <Route path="/country/:countryCode" element={<CountryPage />} />
       </Routes>
+      <Footer />
     </div>
   );
 }
