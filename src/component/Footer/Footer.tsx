@@ -2,7 +2,7 @@ import "./footer.css";
 
 const Footer = () => {
   return (
-    <div>
+    <footer>
       <div className="attribution">
         Challenge by{" "}
         <a
@@ -14,7 +14,7 @@ const Footer = () => {
         </a>
         . Coded by <a href="https://tonnipaul.com">TonniPaul</a>.
       </div>
-    </div>
+    </footer>
   );
 };
 
