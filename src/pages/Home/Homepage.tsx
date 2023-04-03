@@ -49,7 +49,7 @@ function HomPage() {
   return (
     <main className="app_main_container">
       <Input
-        onSubmit={handleSearch}
+        onChange={handleSearch}
         handleFilterByRegion={handleFilterByRegion}
       />
       {searchedCountry.length > 0 ? (

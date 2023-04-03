@@ -2,16 +2,17 @@ import React, { useState } from "react";
 import "./input.css";
 
 interface InputProps {
-  onSubmit: (searchValue: string, filterValue: string) => void;
+  onChange: (searchValue: string, filterValue: string) => void;
   handleFilterByRegion: (filterValue: string) => void;
 }
 
-const Input = ({ onSubmit, handleFilterByRegion }: InputProps) => {
+const Input = ({ onChange, handleFilterByRegion }: InputProps) => {
   const [searchValue, setSearchValue] = useState("");
   const [filterValue, setFilterValue] = useState("");
 
   const handleSearch = (e: React.ChangeEvent<HTMLInputElement>) => {
     setSearchValue(e.target.value);
+    onChange(searchValue, filterValue);
   };
 
   const handleSelectedFilter = (e: React.ChangeEvent<HTMLSelectElement>) => {
@@ -23,12 +24,12 @@ const Input = ({ onSubmit, handleFilterByRegion }: InputProps) => {
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     searchValue.length === 0 && setSearchValue("");
-    onSubmit(searchValue, filterValue);
+    onChange(searchValue, filterValue);
   };
 
   return (
     <div className="input_main_container">
-      <form className="input_form" onSubmit={handleSubmit}>
+      <div className="input_form">
         <img
           src="/assets/search-icon.svg"
           alt="search-icon"
@@ -43,7 +44,7 @@ const Input = ({ onSubmit, handleFilterByRegion }: InputProps) => {
           onChange={handleSearch}
           value={searchValue}
         />
-      </form>
+      </div>
 
       <form className="filter_form" onSubmit={handleSubmit}>
         <select
