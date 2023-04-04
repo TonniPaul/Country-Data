@@ -12,7 +12,7 @@ const Input = ({ onChange, handleFilterByRegion }: InputProps) => {
 
   const handleSearch = (e: React.ChangeEvent<HTMLInputElement>) => {
     setSearchValue(e.target.value);
-    onChange(searchValue, filterValue);
+    onChange(e.target.value, filterValue);
   };
 
   const handleSelectedFilter = (e: React.ChangeEvent<HTMLSelectElement>) => {
