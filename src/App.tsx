@@ -25,7 +25,7 @@ function App() {
     <div className="App" id={theme}>
       <Navbar theme={theme} onClick={toggleTheme} />
       <Routes>
-        <Route path="/" element={<HomePage />} />
+        <Route index element={<HomePage />} />
         <Route path="/country/:countryCode" element={<CountryPage />} />
       </Routes>
       <ScrollButton />
