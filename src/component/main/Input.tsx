@@ -19,12 +19,7 @@ const Input = ({ onChange, handleFilterByRegion }: InputProps) => {
     setFilterValue(e.target.value);
     handleFilterByRegion(e.target.value);
     setSearchValue("");
-  };
-
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    searchValue.length === 0 && setSearchValue("");
-    onChange(searchValue, filterValue);
+    onChange(searchValue, e.target.value);
   };
 
   return (
@@ -46,7 +41,7 @@ const Input = ({ onChange, handleFilterByRegion }: InputProps) => {
         />
       </div>
 
-      <form className="filter_form" onSubmit={handleSubmit}>
+      <div className="filter_form">
         <select
           name="continent"
           id="continent"
@@ -64,7 +59,7 @@ const Input = ({ onChange, handleFilterByRegion }: InputProps) => {
           <option value="Oceania">Oceania</option>
         </select>
         <img src="/assets/dropdown-icon.svg" alt="dropdown" />
-      </form>
+      </div>
     </div>
   );
 };

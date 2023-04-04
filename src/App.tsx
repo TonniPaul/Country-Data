@@ -1,6 +1,6 @@
 import "./App.css";
 import Navbar from "./component/navbar/Navbar";
-import Homepage from "./pages/Home/Homepage";
+import HomePage from "./pages/Home/Homepage";
 import { Routes, Route } from "react-router-dom";
 import CountryPage from "./pages/countryPage/CountryPage";
 import { useEffect, useState } from "react";
@@ -25,7 +25,7 @@ function App() {
     <div className="App" id={theme}>
       <Navbar theme={theme} onClick={toggleTheme} />
       <Routes>
-        <Route path="/" element={<Homepage />} />
+        <Route path="/" element={<HomePage />} />
         <Route path="/country/:countryCode" element={<CountryPage />} />
       </Routes>
       <ScrollButton />
