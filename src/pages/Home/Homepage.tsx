@@ -53,18 +53,15 @@ function HomePage() {
   // calculate indexes of countries to display based on current page and countries per page
   const indexOfLastCountry = currentPage * countriesPerPage;
   const indexOfFirstCountry = indexOfLastCountry - countriesPerPage;
+  const totalPages = Math.ceil(data.length / countriesPerPage);
+
   const currentCountries = searchedCountry.slice(
     indexOfFirstCountry,
     indexOfLastCountry
   );
 
-  const handleNextPage = () => {
-    setCurrentPage(currentPage + 1);
-  };
-
-  const handlePrevPage = () => {
-    setCurrentPage(currentPage - 1);
-  };
+  // create an array of page number from page 1 to totalPages
+  const pageNumbers = [...Array(totalPages + 1).keys()].slice(1);
 
   return (
     <main className="app_main_container">
@@ -90,32 +87,25 @@ function HomePage() {
             })}
           </div>
           <div className="pagination">
-            <button
-              className={`prev ${currentPage === 1 && "disabled_btn"}`}
-              onClick={handlePrevPage}
-              disabled={currentPage === 1}
-            >
-              &larr; Prev
-            </button>
-            <button
-              className={`next ${
-                indexOfLastCountry >= searchedCountry.length && "disabled_btn"
-              }`}
-              onClick={handleNextPage}
-              disabled={indexOfLastCountry >= searchedCountry.length}
-            >
-              Next &rarr;
-            </button>
+            {pageNumbers.map((nPage, index) => (
+              <button
+                key={index}
+                className={`page ${nPage === currentPage && "active"}`}
+                onClick={() => setCurrentPage(nPage)}
+              >
+                {nPage}
+              </button>
+            ))}
           </div>
         </div>
       ) : (
         <p className="error_message">
           No result found for your search term{" "}
           <span className="bold_text">"{errorMessage.search}" </span> in the{" "}
-          <span className="bold_text">"{`${errorMessage.region}`} </span>
+          <span className="bold_text">{`${errorMessage.region}`} </span>
           <span className="bold_text">
             {" "}
-            {`${errorMessage.all ? "regions." : "region."}`} "
+            {`${errorMessage.all ? "regions." : "region."}`}
           </span>{" "}
           Please try searching again with a different region or a different
           search term.

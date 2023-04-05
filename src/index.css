@@ -22,10 +22,14 @@ body {
    font-weight: 400;
    font-size: .900rem;
    color: var(--black);
+   --scroll_color : black;
+   --filter: invert(100%) sepia(0%) saturate(2%) hue-rotate(321deg) brightness(107%) contrast(101%);
 }
 
 body #dark {
    color: var(--white);
+   --scroll_color : white;
+   --filter: invert(0%) sepia(1%) saturate(30%) hue-rotate(40deg) brightness(88%) contrast(100%);
 }
 
 a {

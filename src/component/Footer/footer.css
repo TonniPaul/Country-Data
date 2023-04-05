@@ -11,3 +11,9 @@
      color: #E89B19; 
      font-weight: 700;
 }
+footer {
+  position: absolute;
+  bottom: 10px;
+  right: 50%;
+  transform: translateX(50%);
+}

@@ -9,10 +9,16 @@
   margin-top: 2rem;
 }
 
+#dark .error_message {
+  color: var(--white);
+}
 .pagination {
   display: flex;
   justify-content: space-between;
+  gap: 10px;
   padding: 2rem;
+  width: 100%;
+  flex-wrap: wrap;
 }
 
 .pagination button {
@@ -28,9 +34,23 @@
 .disabled_btn {
   visibility: hidden;
 }
+button.page {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+button.page.active {
+  background: var(--black);
+  color: var(--white);
+}
+
 #dark .pagination button {
   background: var(--primary_dark);
   color: var(--white);
+}
+#dark button.page.active {
+  background: var(--white);
+  color: var(--black);
 }
 @media (min-width: 600px) {
   .app_data {

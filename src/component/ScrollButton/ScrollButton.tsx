@@ -28,11 +28,12 @@ const ScrollButton: React.FC = () => {
             position: "fixed",
             right: 10,
             bottom: 20,
-            background: "yellow",
+            background: "var(--scroll_color)",
             border: "none",
             transform: "rotate(180deg)",
             borderRadius: "50%",
             padding: 10,
+            cursor: "pointer",
           }}
         >
           <img
@@ -41,6 +42,7 @@ const ScrollButton: React.FC = () => {
             style={{
               width: 20,
               height: 20,
+              filter: "var(--filter)",
             }}
           />
         </button>
