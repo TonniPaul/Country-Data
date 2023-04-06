@@ -6,8 +6,8 @@ import Input from "../../component/main/Input";
 
 function HomePage() {
   // setting default value of countries to data in the json file.
-  const [searchedCountry, setSearchedCountry] = useState(data);
-  const [errorMessage, setErrorMessage] = useState({
+  const [searchedResult, setSearchedResult] = useState(data);
+  const [errorObject, setErrorObject] = useState({
     search: "",
     region: "",
     all: true,
@@ -28,10 +28,10 @@ function HomePage() {
           country.capital?.toLowerCase().includes(searchValue.toLowerCase())
       );
     if (filteredCountries.length > 0) {
-      setSearchedCountry(filteredCountries);
+      setSearchedResult(filteredCountries);
     } else {
-      setSearchedCountry([]);
-      setErrorMessage({
+      setSearchedResult([]);
+      setErrorObject({
         search: searchValue,
         region:
           filterValue === "All" || filterValue === "" ? "All" : filterValue,
@@ -43,9 +43,9 @@ function HomePage() {
 
   const handleFilterByRegion = (region: string) => {
     if (region === "All") {
-      setSearchedCountry(data);
+      setSearchedResult(data);
     } else {
-      setSearchedCountry(data.filter((country) => country.region === region));
+      setSearchedResult(data.filter((country) => country.region === region));
     }
     setCurrentPage(1); // reset current page to 1 after search/filter
   };
@@ -55,7 +55,7 @@ function HomePage() {
   const indexOfFirstCountry = indexOfLastCountry - countriesPerPage;
   const totalPages = Math.ceil(data.length / countriesPerPage);
 
-  const currentCountries = searchedCountry.slice(
+  const currentCountries = searchedResult.slice(
     indexOfFirstCountry,
     indexOfLastCountry
   );
@@ -63,13 +63,20 @@ function HomePage() {
   // create an array of page number from page 1 to totalPages
   const pageNumbers = [...Array(totalPages + 1).keys()].slice(1);
 
+  const handleNext = () => {
+    setCurrentPage(currentPage + 1);
+  };
+  const handlePrev = () => {
+    setCurrentPage(currentPage - 1);
+  };
+
   return (
     <main className="app_main_container">
       <Input
         onChange={handleSearch}
         handleFilterByRegion={handleFilterByRegion}
       />
-      {searchedCountry.length > 0 ? (
+      {searchedResult.length > 0 ? (
         <div className="app_data_main">
           <div className="app_data">
             {currentCountries.map((data) => {
@@ -87,6 +94,15 @@ function HomePage() {
             })}
           </div>
           <div className="pagination">
+            <button
+              className={`hide_on_desktop ${
+                currentPage <= 1 && "disabled_btn"
+              }`}
+              onClick={handlePrev}
+              disabled={currentPage >= totalPages ? true : false}
+            >
+              &larr; prev
+            </button>
             {pageNumbers.map((nPage, index) => (
               <button
                 key={index}
@@ -96,16 +112,25 @@ function HomePage() {
                 {nPage}
               </button>
             ))}
+            <button
+              className={`hide_on_desktop ${
+                currentPage >= totalPages && "disabled_btn"
+              }`}
+              onClick={handleNext}
+              disabled={currentPage >= totalPages ? true : false}
+            >
+              next &rarr;
+            </button>
           </div>
         </div>
       ) : (
         <p className="error_message">
           No result found for your search term{" "}
-          <span className="bold_text">"{errorMessage.search}" </span> in the{" "}
-          <span className="bold_text">{`${errorMessage.region}`} </span>
+          <span className="bold_text">"{errorObject.search}" </span> in the{" "}
+          <span className="bold_text">{`${errorObject.region}`} </span>
           <span className="bold_text">
             {" "}
-            {`${errorMessage.all ? "regions." : "region."}`}
+            {`${errorObject.all ? "regions." : "region."}`}
           </span>{" "}
           Please try searching again with a different region or a different
           search term.
