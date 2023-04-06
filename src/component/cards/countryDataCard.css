@@ -22,7 +22,14 @@
 .country_data_sub_container {
   padding: 1rem;
 }
-
+.country_name {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.country_name:hover {
+  white-space: pre-line;
+}
 .country_data_sub_container {
   padding-top: 0;
 }

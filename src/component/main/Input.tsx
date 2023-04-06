@@ -57,6 +57,7 @@ const Input = ({ onChange, handleFilterByRegion }: InputProps) => {
           <option value="Asia">Asia</option>
           <option value="Europe">Europe</option>
           <option value="Oceania">Oceania</option>
+          <option value="Polar">Polar</option>
         </select>
         <img src="/assets/dropdown-icon.svg" alt="dropdown" />
       </div>

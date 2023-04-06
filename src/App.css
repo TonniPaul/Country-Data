@@ -1,6 +1,7 @@
 .App {
    min-height: 100vh;
    padding-bottom: 2rem;
+   position: relative;
 }
 body #dark {
    background: var(--bg_dark);
