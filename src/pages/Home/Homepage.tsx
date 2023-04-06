@@ -53,7 +53,7 @@ function HomePage() {
   // calculate indexes of countries to display based on current page and countries per page
   const indexOfLastCountry = currentPage * countriesPerPage;
   const indexOfFirstCountry = indexOfLastCountry - countriesPerPage;
-  const totalPages = Math.ceil(data.length / countriesPerPage);
+  const totalPages = Math.ceil(searchedResult.length / countriesPerPage);
 
   const currentCountries = searchedResult.slice(
     indexOfFirstCountry,
