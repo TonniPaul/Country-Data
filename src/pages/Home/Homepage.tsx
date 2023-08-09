@@ -63,11 +63,8 @@ function HomePage() {
   // create an array of page number from page 1 to totalPages
   const pageNumbers = [...Array(totalPages + 1).keys()].slice(1);
 
-  const handleNext = () => {
-    setCurrentPage(currentPage + 1);
-  };
-  const handlePrev = () => {
-    setCurrentPage(currentPage - 1);
+  const handlePageChange = (page: number) => {
+    setCurrentPage(page);
   };
 
   return (
@@ -98,8 +95,8 @@ function HomePage() {
               className={`hide_on_desktop ${
                 currentPage <= 1 && "disabled_btn"
               }`}
-              onClick={handlePrev}
-              disabled={currentPage >= totalPages ? true : false}
+              onClick={() => handlePageChange(currentPage - 1)}
+              disabled={currentPage === 1}
             >
               &larr; prev
             </button>
@@ -116,8 +113,8 @@ function HomePage() {
               className={`hide_on_desktop ${
                 currentPage >= totalPages && "disabled_btn"
               }`}
-              onClick={handleNext}
-              disabled={currentPage >= totalPages ? true : false}
+              onClick={() => handlePageChange(currentPage + 1)}
+              disabled={currentPage >= totalPages}
             >
               next &rarr;
             </button>
