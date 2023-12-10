@@ -68,7 +68,7 @@ I intend to continue building more projects using typescript.
 
 ## Author
 
-- Website - [Paul Oluwatoni Ariyo-Adeoye](https://www.your-site.com)
+- Website - [Paul Oluwatoni Ariyo-Adeoye](https://tonnipaul.com)
 - Frontend Mentor - [@tonnipaul](https://www.frontendmentor.io/profile/tonnipaul)
 - Twitter - [@tonnipaul](https://www.twitter.com/tonnipaul)
 
